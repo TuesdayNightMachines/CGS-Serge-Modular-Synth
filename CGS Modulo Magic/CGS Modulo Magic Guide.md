@@ -1,4 +1,4 @@
-_Originally published by The Tuesday Night Machines [on Muffwiggler](https://www.muffwiggler.com/forum/viewtopic.php?t=208446&highlight=), 2018-10-21 _
+_Originally published by The Tuesday Night Machines [on Muffwiggler](https://www.muffwiggler.com/forum/viewtopic.php?t=208446&highlight=), 2018-10-21_
 
 
 
