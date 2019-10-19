@@ -52,13 +52,10 @@ You can use this to chain multiple Gated Comparators together too, by patching t
 
 In my build, flipping the LOOP ENABLE switch up also disconnects the IN socket, which is a useful mod. Originally, the INput and the LOOP IN are OR-gated, meaning they will both add high states to the DSR when either signal is high. This can make the whole DSR pattern go completely high quickly though, which isn’t that great.
 >tojpeters wrote:
->loop enable would more appropriately be labeled loop disable
-
->It works as you say
-
->TheDPDT switch to cut off the input is a nearly required mod
-
->For all the mods available for the Swamp panel see my [Black Swamp build thread](https://www.muffwiggler.com/forum/viewtopic.php?t=147603&highlight=)
+> loop enable would more appropriately be labeled loop disable.
+> It works as you say.
+> TheDPDT switch to cut off the input is a nearly required mod.
+> For all the mods available for the Swamp panel see my [Black Swamp build thread](https://www.muffwiggler.com/forum/viewtopic.php?t=147603&highlight=)
 
 
 **LOOP ENABLE SOCKET:** This is a bit weird. If the LOOP ENABLE switch is up and the socket receives a high signal, looping stops. I have to check again if it’s also possible to enable looping with a high signal and the switch being down. Does anybody else have any insights regarding this?
@@ -74,20 +71,16 @@ Okay, that’s all of the controls. I hope it made the behavior of this cool mod
 ### So what can you use this for?
 
 - It’s two CV sequencers with additional inverted outputs, so four CV sequences total!
-
 - It’s an eight step gate sequencer too, of course!
-
 - The whole thing can work randomly by feeding the INput noise or fast CV, or more deterministically by sending another sequencer’s output or a synced LFO or something like that to the INput. And of course you can loop the patterns with the flick of a switch, taming the chaos.
-
 - It’s also a simple comparator, which is nice.
-
 - It can act as a gate delay, because an incoming gate signal is shifted down the DSR for up to eight clock pulses, which would be the maximum delay time.
-
 - Here’s a patch tip to get 16 steps from the eight step DSR, by inverting the sequence (similar to what the Turing Machine can do):
 >zthee wrote:
+>
 > ![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Gated%20Comparator/images/CGS_Gated_Comparator_006.jpg "")
+>
 >If you just clock it (With no input) you should see it go from no lit to all lit, and back again.
-
 
 - Another cool thing is to manually load only one high bit into the DSR (only one stage LED lit), using the MANUAL LOOP switch’s momentary side, and turn on looping. Now, together with the stage knobs and the MIX output, the module acts as a regular 8-step CV sequencer, because not more than one stage can be active at the same time, thus only one knob CV is being output.
 
