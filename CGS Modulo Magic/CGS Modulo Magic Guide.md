@@ -1,3 +1,5 @@
+Originally published by The Tuesday Night Machines [on Muffwiggler](https://www.muffwiggler.com/forum/viewtopic.php?t=208446&highlight=), 2018-10-21 
+
 This is an attempt to explain Ken Stone’s CGS Modulo Magic module, as found on the Best of CGS MARSH panel, so that users will be able to patch it in a more deterministic manner.
 
 ![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Modulo%20Magic/images/CGS_Modulo_Magic_001.jpg "")
