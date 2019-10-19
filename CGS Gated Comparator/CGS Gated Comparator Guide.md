@@ -22,9 +22,7 @@ In a nutshell, the module creates high or low states from an analog input CV goi
 
 **GATE OUTPUTS 1-8:** Direct gate outputs of the eight DSR stages.
 
-**STAGE KNOBS 1-8:** Turning a knob sets the amount of CV which is added to the MIX output when the stage’s output is high.
-
-Pulling a knob out (maybe that’s a mod?), will remove its stage from the DAC’s “RANDOM” output.
+**STAGE KNOBS 1-8:** Turning a knob sets the amount of CV which is added to the MIX output when the stage’s output is high. Pulling a knob out (maybe that’s a mod?), will remove its stage from the DAC’s “RANDOM” output.
 > tojpeters wrote:
 > Bit disable is a mod
 
