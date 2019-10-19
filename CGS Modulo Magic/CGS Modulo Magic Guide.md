@@ -1,4 +1,6 @@
-Originally published by The Tuesday Night Machines [on Muffwiggler](https://www.muffwiggler.com/forum/viewtopic.php?t=208446&highlight=), 2018-10-21 
+_Originally published by The Tuesday Night Machines [on Muffwiggler](https://www.muffwiggler.com/forum/viewtopic.php?t=208446&highlight=), 2018-10-21 _
+
+
 
 This is an attempt to explain Ken Stone’s CGS Modulo Magic module, as found on the Best of CGS MARSH panel, so that users will be able to patch it in a more deterministic manner.
 
@@ -8,7 +10,8 @@ After re-reading [Ken’s webpage](https://web.archive.org/web/20170607093045/ht
 
 I’d like to start without actually talking about the mathematical Modulo principle, because it seems to be just a small part of this module’s functionality.
 
-**What this module does in a nutshell:**
+### What this module does in a nutshell:
+
 You set a voltage threshold, called “Initiation CV”, and when the input signal reaches this level, another voltage, called “Step Size CV” is added or subtracted. Then, if the new voltage reaches the threshold again, or rather if it rises by the threshold amount, the Step Size voltage is added or subtracted again, and so on ... up to eight times, eight so-called “Steps”. After the last Step, no more processing takes place and the Output signal simply tracks the Input signal changes.
 
 **Example:**
@@ -26,7 +29,7 @@ After the input voltage rises to 1V, it drops by 0.5V, then it rises by another 
 That’s it. Well, there’s more to do obviously and there are some quirks, but those are the basics really.
 
 
-**Controls and Features:**
+### Controls and Features:
 
 ![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Modulo%20Magic/images/CGS_Modulo_Magic_003.jpg "")
 
@@ -46,7 +49,8 @@ That’s it. Well, there’s more to do obviously and there are some quirks, but
 **Steps Rotary Switch:** Sets the amount of times the threshold can be reached and processing takes place. Mine seems to be wired from left to right like this: 8, 1, 2, 3, 4, 5, 6, 7. Odd.
 
 
-**The Modulo**
+### The Modulo
+
 Okay, let’s talk about the Modulo principle now. The mathematical Modulo % operation returns the remainder after a division, blah blah blah. My head is spinning already! Haha! More importantly, the Modulo restricts an input to a certain range:
 
 x % y returns only values from 0 to y-1, no matter how large the value of x.
@@ -65,10 +69,11 @@ This restricts the input voltage to a range between 0 and 1V:
 This might be handy, for example, to restrict a pitch CV to only one octave and it’s probably why we find the Modulo Magic on the same panel as the Infinite Melody module, with its wide octave range and unpredictable CV levels. I used this technique in the following video, to more or less keep the melodies in lower octaves:
 
 [![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Modulo%20Magic/images/CGS_Modulo_Magic_012.jpg "")](https://www.youtube.com/watch?v=0d8qU9nQ8To)
+
 [https://www.youtube.com/watch?v=0d8qU9nQ8To](https://www.youtube.com/watch?v=0d8qU9nQ8To)
 
 
-**The Step Count:**
+### The Step Count:
 You can enable up to eight steps with the Steps rotary switch, which will send the Input signal through a series of comparators, each of which receives the processed signal of the previous one. So below the Initiation CV threshold, the signal simply passes through all Steps unchanged. When it reaches the threshold, the first comparator triggers the Step Size voltage addition or subtraction. This new voltage is then sent onwards through the comparator chain and as soon as it reaches the threshold again, it triggers the next one. After a maximum number of eight Steps, the last voltage result is kept and further increasing Input voltage will simply be added.
 
 **Example:**
@@ -83,7 +88,7 @@ You can enable up to eight steps with the Steps rotary switch, which will send t
 After subtracting 1V four times after reaching the threshold, the last Step has been triggered and the output voltage now tracks the input voltage with a -4V offset.
 
 
-**Going down:**
+### Going down:
 So far we only looked at situations where Initiation CV plus Step Size resulted in a positive voltage. If the Step Size is subtracting a larger voltage than the Initiation CV level, then the Output signal can actually decrease and even go negative.
 
 **Example:**
@@ -95,7 +100,7 @@ So far we only looked at situations where Initiation CV plus Step Size resulted 
 
 
 
-**Up and Down:**
+### Up and Down:
 Now, let’s look at a rising and falling Input signal, like a Sine wave, which is a lot more common than the infinitely rising voltage of our previous examples.
 
 **Example:**
@@ -110,7 +115,7 @@ As soon as the Input voltage reaches 1V, the Step Size of -1V is applied. When t
 The blue wave above obviously sounds a lot different than the original Sine wave, so we’re using the Modulo Magic as a waveshaping audio effect now. Imagine what can be done with the multitude of CV modulation inputs. Or better yet, try it out! But first, let’s look at the modulation options together.
 
 
-**Initiation CV Offset:**
+### Initiation CV Offset:
 The Offset knob and CV allow you to alter the voltage at which the first Step is initiated. It basically shifts the whole processing chain up or down the voltage range, but leaves the actual Initiation-plus-Step-Size processing unchanged.
 
 **Example:**
@@ -132,7 +137,7 @@ Crap, I’m on an airplane now and my lines are getting squigglier and my girlfr
 
 So, what’s left? Oh yes:
 
-**VC Step Size Addition and Subtraction:**
+### VC Step Size Addition and Subtraction:
 You can use the VC Sub and VC Add inputs and their attenuators to modulate the Step Size for even more waveshaping fun.
 
 An interesting feature, which is also mentioned briefly in Ken’s description, is that you can use those inputs as a mixer, if you don’t do any other processing with the module. Setting Initation CV, Offset and Step Size to 0 (middle position for Step Size!Remember it’s bipolar!), will pass the Input signal through to the Output unchanged, without the whole stepping stuff. At least in theory, as you’ll probably not get everything exactly to 0 with the knobs, and stepping might still occur lightning fast at some levels, but you’ll get close enough. When you turn the Step Size knob now, you will apply a constant voltage offset to the Input signal and by sending other signals into the VC Sub and VC Add inputs, you will subtract and/or add those to the signal.
@@ -151,7 +156,7 @@ While I’m not sure if this example was necessary, the drawing might at least a
 Alright, that’s it for now. Let’s quickly recap the important bits.
 
 
-**Recap:**
+### Recap:
 
 **Use-cases of the Modulo Magic:**
 - Restricting voltages to a certain range (Initiation CV equals Step Size inverted)
@@ -169,6 +174,6 @@ I have a feeling that there are probably some more wild things to be done with f
 
 I think the Modulo Magic fits the Serge Modular’s “patch programming” concept incredibly well. You’ve got this rather simple mathematical principle for restricting values to a range based on the Modulo operation, but then you get access to all the variables in the underlying circuit on the front panel and can totally mess the whole thing up and create … magic.
 
-Thanks for reading! nanners
+Thanks for reading!
 
 Let me know if there are any mistakes or if you have additional insights. I’m writing this in between things from memory, because I neglected to take any notes during the past days of researching and testing. Oh well. I need a drink now.
