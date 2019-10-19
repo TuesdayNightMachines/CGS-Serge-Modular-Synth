@@ -1,8 +1,8 @@
 This is an attempt to explain Ken Stone’s CGS Modulo Magic module, as found on the Best of CGS MARSH panel, so that users will be able to patch it in a more deterministic manner.
 
+![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Modulo%20Magic/images/CGS_Modulo_Magic_001.jpg "")
 
-
-After re-reading Ken’s webpage about the module tons of times and analyzing its output on an oscilloscope, I think I finally got a grip on how the Modulo Magic’s different parts interact.
+After re-reading [Ken’s webpage](https://web.archive.org/web/20170607093045/http://www.cgs.synth.net:80/modules/cgs40_modulo_magic.html) about the module tons of times and analyzing its output on an oscilloscope, I think I finally got a grip on how the Modulo Magic’s different parts interact.
 
 I’d like to start without actually talking about the mathematical Modulo principle, because it seems to be just a small part of this module’s functionality.
 
