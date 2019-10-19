@@ -17,6 +17,7 @@ You set a voltage threshold, called “Initiation CV”, and when the input sign
 - Step Size CV is set to -0.5V
 
 This would look like the following finger paint sketch (sorry, I’m on an old iPad):
+
 ![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Modulo%20Magic/images/CGS_Modulo_Magic_002.jpg "")
 
 
@@ -26,6 +27,7 @@ That’s it. Well, there’s more to do obviously and there are some quirks, but
 
 
 **Controls and Features:**
+
 ![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Modulo%20Magic/images/CGS_Modulo_Magic_003.jpg "")
 
 **Input:** Patch the audio or CV signal to be processed in here.
@@ -36,6 +38,7 @@ That’s it. Well, there’s more to do obviously and there are some quirks, but
 **Offset Knob:** Adds an offset to the Initiation CV threshold, but only for the very first Step. More on this later. This control also has a CV input with polarity switch. Keep it at the + position if not using CV.
 
 **Step Size Knob:** This sets the voltage to be added or subtracted to/from the Input signal after the Initiation CV threshold is reached. This knob is bipolar, which is not indicated by the Best of CGS front panel graphics and also it’s reversed. In the middle position there is no voltage change after reaching the threshold, turning it CW to the right subtracts CV and turning it CCW to the left adds CV. Think of it like this:
+
 ![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Modulo%20Magic/images/CGS_Modulo_Magic_004.jpg "")
 
 **VC Sub & VC Add:** CV inputs with attenuators to add or subtract to/from the Step Size voltage.
@@ -62,6 +65,7 @@ This restricts the input voltage to a range between 0 and 1V:
 This might be handy, for example, to restrict a pitch CV to only one octave and it’s probably why we find the Modulo Magic on the same panel as the Infinite Melody module, with its wide octave range and unpredictable CV levels. I used this technique in the following video, to more or less keep the melodies in lower octaves:
 
 [![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Modulo%20Magic/images/CGS_Modulo_Magic_012.jpg "")](https://www.youtube.com/watch?v=0d8qU9nQ8To)
+[https://www.youtube.com/watch?v=0d8qU9nQ8To](https://www.youtube.com/watch?v=0d8qU9nQ8To)
 
 
 **The Step Count:**
@@ -73,81 +77,83 @@ You can enable up to eight steps with the Steps rotary switch, which will send t
 - Step Size CV is set to -1.0V
 - Steps set to 4
 
+![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Modulo%20Magic/images/CGS_Modulo_Magic_006.jpg "")
 
 
 After subtracting 1V four times after reaching the threshold, the last Step has been triggered and the output voltage now tracks the input voltage with a -4V offset.
 
 
-Going down:
+**Going down:**
 So far we only looked at situations where Initiation CV plus Step Size resulted in a positive voltage. If the Step Size is subtracting a larger voltage than the Initiation CV level, then the Output signal can actually decrease and even go negative.
 
-Example:
+**Example:**
 - Input signal is a linearly rising voltage, starting at 0V
 - Initiation CV is set to 0.5V
 - Step Size CV is set to -1.0V
 
+![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Modulo%20Magic/images/CGS_Modulo_Magic_007.jpg "")
 
 
 
-Up and Down:
+**Up and Down:**
 Now, let’s look at a rising and falling Input signal, like a Sine wave, which is a lot more common than the infinitely rising voltage of our previous examples.
 
-Example:
+**Example:**
 - Input signal is a Sine wave between 0 and just below 2V
 - Initiation CV is set to 1.0V
 - Step Size CV is set to -1.0V
 
-
+![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Modulo%20Magic/images/CGS_Modulo_Magic_008.jpg "")
 
 As soon as the Input voltage reaches 1V, the Step Size of -1V is applied. When the Input signal drops below 1V again, the Step Size voltage is removed, so Input signal equals Output signal again.
 
 The blue wave above obviously sounds a lot different than the original Sine wave, so we’re using the Modulo Magic as a waveshaping audio effect now. Imagine what can be done with the multitude of CV modulation inputs. Or better yet, try it out! But first, let’s look at the modulation options together.
 
 
-Initiation CV Offset:
+**Initiation CV Offset:**
 The Offset knob and CV allow you to alter the voltage at which the first Step is initiated. It basically shifts the whole processing chain up or down the voltage range, but leaves the actual Initiation-plus-Step-Size processing unchanged.
 
-Example:
+**Example:**
 - Input signal is a linearly rising voltage, starting at 0V
 - Initiation CV is 1.0V
 - Offset is 3.0V
 - Step Size CV is -1.0V
 - Steps set to 4
 
-
+![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Modulo%20Magic/images/CGS_Modulo_Magic_009.jpg "")
 
 As you can see, the Offset of 3V will delay the Initiation of the Steps until the Input reaches the level of Offset plus Initiation CV threshold, i.e. 3 + 1 = 4V.
 
 Thinking of the above Sine wave example, you could imagine sending an LFO into the Offset CV input to alter the point on the Sine wave where the waveshaping starts to occur. If the Offset CV is higher than the Input signal amplitude no waveshaping will be done, but if the CV drops, the processing will slowly move along the Sine wave:
 
-
+![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Modulo%20Magic/images/CGS_Modulo_Magic_010.jpg "")
 
 Crap, I’m on an airplane now and my lines are getting squigglier and my girlfriend is rolling her eyes at me and mocking my enthusiasm writing this document. But you get the idea. Waveshaping is cool! Try it with CV. Bet you haven’t heard that one before.
 
 So, what’s left? Oh yes:
 
-VC Step Size Addition and Subtraction:
+**VC Step Size Addition and Subtraction:**
 You can use the VC Sub and VC Add inputs and their attenuators to modulate the Step Size for even more waveshaping fun.
 
 An interesting feature, which is also mentioned briefly in Ken’s description, is that you can use those inputs as a mixer, if you don’t do any other processing with the module. Setting Initation CV, Offset and Step Size to 0 (middle position for Step Size!Remember it’s bipolar!), will pass the Input signal through to the Output unchanged, without the whole stepping stuff. At least in theory, as you’ll probably not get everything exactly to 0 with the knobs, and stepping might still occur lightning fast at some levels, but you’ll get close enough. When you turn the Step Size knob now, you will apply a constant voltage offset to the Input signal and by sending other signals into the VC Sub and VC Add inputs, you will subtract and/or add those to the signal.
 
-Example:
+**Example:**
 - Input signal is a slow Sine wave
 - Initiation CV is 0V
 - Offset is 0V
 - Step Size is 0V
 - VC Add receives a fast Sine wave
 
-
+![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Modulo%20Magic/images/CGS_Modulo_Magic_011.jpg "")
 
 While I’m not sure if this example was necessary, the drawing might at least add some comical value.
 
 Alright, that’s it for now. Let’s quickly recap the important bits.
 
 
-Recap:
+**Recap:**
 
-Use-cases of the Modulo Magic:
+**Use-cases of the Modulo Magic:**
 - Restricting voltages to a certain range (Initiation CV equals Step Size inverted)
 - Waveshaping (whoop!)
 - Signal offsetting (using Step Size only, Initiation CV and Offset set to 0)
@@ -156,7 +162,7 @@ Use-cases of the Modulo Magic:
 
 I have a feeling that there are probably some more wild things to be done with feedback loops, which I haven’t tested yet.
 
-Watch out for:
+**Watch out for:**
 - Step Size knob is bipolar, with 0 in the middle, and reversed polarity, with negative voltages CW and positive ones CCW.
 - Steps knob rotary switch wiring. Mine has 8 at fully CCW and then goes 1-7 when turned CW.
 
