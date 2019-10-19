@@ -5,7 +5,7 @@ Alright, after explaining the CGS Modulo Magic, here comes Ken Stone’s Infinit
 ![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Infinite%20Melody/images/CGS_Infinite_Melody_001.jpg "")
 
 Oddly, understanding it seemed way easier than trying to explain it. So consider this a first try and let me know how it worked for you. Here’s Ken’s original website for the Infinite Melody for your research too:
-[https://web.archive.org/web/20170826181343fw_/http://www.cgs.synth.net  :80/modules/cgs32_infinite_melody.html](https://web.archive.org/web/20170826181343fw_/http://www.cgs.synth.net  :80/modules/cgs32_infinite_melody.html)
+[https://web.archive.org/web/20170826181343fw_/http://www.cgs.synth.net:80/modules/cgs32_infinite_melody.html](https://web.archive.org/web/20170826181343fw_/http://www.cgs.synth.net:80/modules/cgs32_infinite_melody.html)
 
 I think understanding the Infinite Melody is awesome, but since the module doesn’t offer any way to check its internal states when patched (which are plenty and which change at different rates), using it in a 100% deterministic way is very difficult and might even be impossible. Nevertheless, please read on! It’s a cool thing to get your head around and it’s obviously a fun module to simply generate random or chaotic CVs with.
 
@@ -61,7 +61,7 @@ That’s the beauty of the CGS Serge stuff ... you are offered a very abstract f
 
 ### What about that Diatonic Converter?
 The Diatonic Converter is an add-on circuit which is included in the MARSH panel’s Infinite Melody module.
-[https://web.archive.org/web/20170826181343fw_/http://www.cgs.synth.net  :80/modules/cgs32_infinite_melody.html](https://web.archive.org/web/20170826181343fw_/http://www.cgs.synth.net  :80/modules/cgs32_infinite_melody.html)
+[https://web.archive.org/web/20170826181343fw_/http://www.cgs.synth.net:80/modules/cgs32_infinite_melody.html](https://web.archive.org/web/20170826181343fw_/http://www.cgs.synth.net:80/modules/cgs32_infinite_melody.html)
 
 It takes six binary input values (who would have thought?!) and creates diatonic pitch CV from them. It is not a quantizer, as it doesn’t accept analog voltages, but only digital high & low (1 & 0) signals. So it fits right in there with the Infinite Melody, as this one provides DSRs full of binary values.
 
