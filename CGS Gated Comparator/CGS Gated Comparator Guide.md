@@ -53,8 +53,11 @@ You can use this to chain multiple Gated Comparators together too, by patching t
 In my build, flipping the LOOP ENABLE switch up also disconnects the IN socket, which is a useful mod. Originally, the INput and the LOOP IN are OR-gated, meaning they will both add high states to the DSR when either signal is high. This can make the whole DSR pattern go completely high quickly though, which isn’t that great.
 >tojpeters wrote:
 >loop enable would more appropriately be labeled loop disable
+
 >It works as you say
+
 >TheDPDT switch to cut off the input is a nearly required mod
+
 >For all the mods available for the Swamp panel see my [Black Swamp build thread](https://www.muffwiggler.com/forum/viewtopic.php?t=147603&highlight=)
 
 
