@@ -20,12 +20,12 @@ You patch a signal into its Noise input, a comparator creates a series of high a
 
 ![alt text](https://raw.githubusercontent.com/TuesdayNightMachines/CGS-Serge-Modular-Synth/master/CGS%20Infinite%20Melody/images/CGS_Infinite_Melody_003.jpg "")
 
-***The pink stuff:***
+### The pink stuff:
 IN (Noise) receives an input signal which is analyzed by the comparator. Sense knob and CV input control the comparator threshold.
 
 When a pulse is sent to the Clock (CLK) input, the current comparator state (high or low … or 1 or 0) is recorded into the DSR’s first stage. On another clock pulse, a new state is recorded into the DSR’s first stage, shifting the previous value to stage two, then stage three, etc. So the DSR always contains a string of 1s and 0s or rather high and low voltages, shifting from right to left in the illustration above on each clock pulse.
 
-***The green stuff:***
+### The green stuff:
 Below each of the six pink DSR stages is a green four-stage DSR, which records the pink stage’s value upon a clock pulse at the Advance (ADV) input. As usual, on new pulses, new values will be recorded into stage one and previously held values are shifted onwards to the next stages.
 
 The green DSRs’ first stages are representing a 6 bit binary value, being fed into a DAC, which outputs an according voltage at output 1. This means that the Bit 1 DSR (Least Significant Bit - LSB) will affect the output voltage very little while Bit 6 (Most Significant Bit - MSB) will affect it the most.
